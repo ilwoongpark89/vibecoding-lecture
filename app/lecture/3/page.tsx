@@ -2,9 +2,14 @@
 
 import PromptPrinciples from "@/components/sections/PromptPrinciples";
 import PromptExercises from "@/components/sections/PromptExercises";
+import PromptAdvanced from "@/components/sections/PromptAdvanced";
+import GoogleDeepMindPrompt from "@/components/sections/GoogleDeepMindPrompt";
+import PromptResponses from "@/components/sections/PromptResponses";
 import PromptDangers from "@/components/sections/PromptDangers";
 import PromptBattle from "@/components/sections/PromptBattle";
+import PromptTemplates from "@/components/sections/PromptTemplates";
 import PromptSummary from "@/components/sections/PromptSummary";
+import PromptHomework from "@/components/sections/PromptHomework";
 import ChatWidget from "@/components/ChatWidget";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -61,9 +66,14 @@ export default function Lecture3() {
 
         <PromptPrinciples />
         <PromptExercises />
+        <PromptAdvanced />
+        <GoogleDeepMindPrompt />
+        <PromptResponses />
         <PromptDangers />
         <PromptBattle />
+        <PromptTemplates />
         <PromptSummary />
+        <PromptHomework />
 
         {/* Next Lecture Teaser */}
         <section className="py-20 bg-slate-950">
@@ -82,6 +92,15 @@ export default function Lecture3() {
                 AI가 만든 코드를 안전하게 관리하는 방법을 배우고,
                 GitHub으로 버전 관리하는 기초를 익힙니다.
               </p>
+              <Link
+                href="/lecture/4"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-emerald-600 to-cyan-600 text-white font-semibold text-lg hover:from-emerald-500 hover:to-cyan-500 transition-all shadow-lg shadow-emerald-500/25 hover:scale-105"
+              >
+                Lecture 4로 이동
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
             </motion.div>
           </div>
         </section>

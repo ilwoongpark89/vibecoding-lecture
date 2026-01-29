@@ -3,6 +3,7 @@
 import CalcShowcase from "@/components/sections/CalcShowcase";
 import CalcBuildSteps from "@/components/sections/CalcBuildSteps";
 import CalcChallenges from "@/components/sections/CalcChallenges";
+import MITAppInventor from "@/components/sections/MITAppInventor";
 import ChatWidget from "@/components/ChatWidget";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -60,6 +61,7 @@ export default function Lecture5() {
         <CalcShowcase />
         <CalcBuildSteps />
         <CalcChallenges />
+        <MITAppInventor />
 
         {/* Next Lecture Teaser */}
         <section className="py-20 bg-slate-950">

@@ -95,48 +95,55 @@ const limitations = [
   },
 ];
 
-const colorMap: Record<string, { badge: string; border: string; bg: string; text: string }> = {
+const colorMap: Record<string, { badge: string; border: string; bg: string; text: string; hoverBorder: string }> = {
   cyan: {
     badge: "bg-cyan-500/10 border-cyan-500/20 text-cyan-400",
     border: "border-cyan-500/30",
     bg: "bg-cyan-500/5",
     text: "text-cyan-400",
+    hoverBorder: "hover:border-cyan-500/30",
   },
   violet: {
     badge: "bg-violet-500/10 border-violet-500/20 text-violet-400",
     border: "border-violet-500/30",
     bg: "bg-violet-500/5",
     text: "text-violet-400",
+    hoverBorder: "hover:border-violet-500/30",
   },
   amber: {
     badge: "bg-amber-500/10 border-amber-500/20 text-amber-400",
     border: "border-amber-500/30",
     bg: "bg-amber-500/5",
     text: "text-amber-400",
+    hoverBorder: "hover:border-amber-500/30",
   },
   red: {
     badge: "bg-red-500/10 border-red-500/20 text-red-400",
     border: "border-red-500/30",
     bg: "bg-red-500/5",
     text: "text-red-400",
+    hoverBorder: "hover:border-red-500/30",
   },
   orange: {
     badge: "bg-orange-500/10 border-orange-500/20 text-orange-400",
     border: "border-orange-500/30",
     bg: "bg-orange-500/5",
     text: "text-orange-400",
+    hoverBorder: "hover:border-orange-500/30",
   },
   yellow: {
     badge: "bg-yellow-500/10 border-yellow-500/20 text-yellow-400",
     border: "border-yellow-500/30",
     bg: "bg-yellow-500/5",
     text: "text-yellow-400",
+    hoverBorder: "hover:border-yellow-500/30",
   },
   pink: {
     badge: "bg-pink-500/10 border-pink-500/20 text-pink-400",
     border: "border-pink-500/30",
     bg: "bg-pink-500/5",
     text: "text-pink-400",
+    hoverBorder: "hover:border-pink-500/30",
   },
 };
 
@@ -196,7 +203,7 @@ export default function HowLLMWorks() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: i * 0.1 }}
-                  className={`p-6 rounded-2xl bg-slate-800/50 border border-slate-700 hover:${c.border} transition-colors`}
+                  className={`p-6 rounded-2xl bg-slate-800/50 border border-slate-700 ${c.hoverBorder} transition-colors`}
                 >
                   <span className="text-3xl mb-3 block">{card.icon}</span>
                   <h3 className="text-lg font-bold text-white mb-0.5">
@@ -345,7 +352,7 @@ export default function HowLLMWorks() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: i * 0.08 }}
-                  className={`p-5 rounded-2xl bg-slate-800/50 border border-slate-700 hover:${c.border} transition-colors`}
+                  className={`p-5 rounded-2xl bg-slate-800/50 border border-slate-700 ${c.hoverBorder} transition-colors`}
                 >
                   <div className="flex items-center gap-3 mb-2">
                     <span className="text-xl">{item.icon}</span>

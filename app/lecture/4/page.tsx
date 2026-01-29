@@ -7,6 +7,7 @@ import GitWorkflow from "@/components/sections/GitWorkflow";
 import GitLiveDemo from "@/components/sections/GitLiveDemo";
 import GitMistakes from "@/components/sections/GitMistakes";
 import GitHubTour from "@/components/sections/GitHubTour";
+import GitHubCopilotStudy from "@/components/sections/GitHubCopilotStudy";
 import GitHomework from "@/components/sections/GitHomework";
 import ChatWidget from "@/components/ChatWidget";
 import Link from "next/link";
@@ -69,6 +70,7 @@ export default function Lecture4() {
         <GitLiveDemo />
         <GitMistakes />
         <GitHubTour />
+        <GitHubCopilotStudy />
         <GitHomework />
 
         {/* Next Lecture Teaser */}
@@ -87,6 +89,15 @@ export default function Lecture4() {
               <p className="text-gray-400 mb-8 max-w-xl mx-auto">
                 열전달·유체역학 계산기를 AI로 처음부터 끝까지 만들어봅니다
               </p>
+              <Link
+                href="/lecture/5"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-emerald-600 to-cyan-600 text-white font-semibold text-lg hover:from-emerald-500 hover:to-cyan-500 transition-all shadow-lg shadow-emerald-500/25 hover:scale-105"
+              >
+                Lecture 5로 이동
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
             </motion.div>
           </div>
         </section>

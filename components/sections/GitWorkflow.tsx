@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState } from "react";
 
 const steps = [
   {
@@ -81,8 +80,6 @@ To https://github.com/you/heat-calc.git
 ];
 
 export default function GitWorkflow() {
-  const [activeStep, setActiveStep] = useState<number | null>(null);
-
   return (
     <section className="py-20 bg-slate-900">
       <div className="container mx-auto px-4">

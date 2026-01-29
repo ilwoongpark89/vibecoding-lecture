@@ -3,6 +3,11 @@
 import ChartTypesGuide from "@/components/sections/ChartTypesGuide";
 import DataVizProcess from "@/components/sections/DataVizProcess";
 import DashboardShowcase from "@/components/sections/DashboardShowcase";
+import EVBatteryDashboard from "@/components/sections/EVBatteryDashboard";
+import BuildingEnergyTwin from "@/components/sections/BuildingEnergyTwin";
+import CFDContourViewer from "@/components/sections/CFDContourViewer";
+import SensorMonitoring from "@/components/sections/SensorMonitoring";
+import ClimateDataExplorer from "@/components/sections/ClimateDataExplorer";
 import ChatWidget from "@/components/ChatWidget";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -60,6 +65,11 @@ export default function Lecture6() {
         <ChartTypesGuide />
         <DataVizProcess />
         <DashboardShowcase />
+        <EVBatteryDashboard />
+        <BuildingEnergyTwin />
+        <CFDContourViewer />
+        <SensorMonitoring />
+        <ClimateDataExplorer />
 
         {/* Next Lecture Teaser */}
         <section className="py-20 bg-slate-950">

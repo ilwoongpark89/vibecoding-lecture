@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const checklistItems = [
   '나의 역할/수준을 밝혔는가? (예: "기계공학 3학년")',
@@ -47,6 +48,14 @@ const itemVariants = {
 };
 
 export default function PromptSummary() {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = async () => {
+    await navigator.clipboard.writeText(promptTemplate);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
   return (
     <section className="relative py-24 bg-slate-950 overflow-hidden">
       {/* Background decoration */}
@@ -131,8 +140,11 @@ export default function PromptSummary() {
             <h3 className="text-xl font-bold bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">
               프롬프트 템플릿
             </h3>
-            <button className="px-4 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-gray-400 text-sm font-medium hover:bg-slate-700 hover:text-gray-200 transition-colors">
-              복사
+            <button
+              onClick={handleCopy}
+              className="px-4 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-gray-400 text-sm font-medium hover:bg-slate-700 hover:text-gray-200 transition-colors"
+            >
+              {copied ? "복사됨!" : "복사"}
             </button>
           </div>
           <div className="bg-slate-950 border border-slate-800 rounded-xl p-6 overflow-x-auto">
@@ -142,43 +154,6 @@ export default function PromptSummary() {
           </div>
         </motion.div>
 
-        {/* 3. Next Week Preview */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="bg-gradient-to-br from-slate-900 to-slate-900/80 border border-indigo-500/30 rounded-2xl p-8"
-        >
-          <div className="flex items-center gap-3 mb-4">
-            <span className="flex-shrink-0 w-10 h-10 rounded-xl bg-indigo-500/20 border border-indigo-500/40 flex items-center justify-center">
-              <svg
-                className="w-5 h-5 text-indigo-400"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M13 7l5 5m0 0l-5 5m5-5H6"
-                />
-              </svg>
-            </span>
-            <h3 className="text-xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
-              다음 주 예고
-            </h3>
-          </div>
-          <p className="text-gray-300 leading-relaxed">
-            Lecture 4에서는{" "}
-            <span className="text-indigo-400 font-semibold">
-              Git과 버전 관리
-            </span>
-            를 배웁니다. 코드를 안전하게 저장하고, 이전 버전으로 되돌리는
-            방법을 익힙니다.
-          </p>
-        </motion.div>
       </div>
     </section>
   );

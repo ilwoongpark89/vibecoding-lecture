@@ -1,8 +1,29 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 
 export default function GitHubTour() {
+  const [contributionColors, setContributionColors] = useState<string[]>(() =>
+    Array.from({ length: 26 * 7 }, () => "bg-slate-700/50")
+  );
+
+  useEffect(() => {
+    setContributionColors(
+      Array.from({ length: 26 * 7 }, () => {
+        const rand = Math.random();
+        return rand > 0.85
+          ? "bg-emerald-400"
+          : rand > 0.7
+          ? "bg-emerald-500/70"
+          : rand > 0.5
+          ? "bg-emerald-600/50"
+          : rand > 0.35
+          ? "bg-emerald-700/30"
+          : "bg-slate-700/50";
+      })
+    );
+  }, []);
   return (
     <section className="py-24 bg-slate-950">
       <div className="container mx-auto px-4">
@@ -423,25 +444,12 @@ export default function GitHubTour() {
                     Contribution Graph (잔디)
                   </p>
                   <div className="grid grid-cols-[repeat(26,1fr)] gap-1">
-                    {Array.from({ length: 26 * 7 }, (_, i) => {
-                      const rand = Math.random();
-                      const color =
-                        rand > 0.85
-                          ? "bg-emerald-400"
-                          : rand > 0.7
-                          ? "bg-emerald-500/70"
-                          : rand > 0.5
-                          ? "bg-emerald-600/50"
-                          : rand > 0.35
-                          ? "bg-emerald-700/30"
-                          : "bg-slate-700/50";
-                      return (
+                    {contributionColors.map((color, i) => (
                         <div
                           key={i}
                           className={`w-full aspect-square rounded-sm ${color}`}
                         />
-                      );
-                    })}
+                    ))}
                   </div>
                   <p className="text-[10px] text-gray-600 mt-2">
                     초록색이 진할수록 그날 커밋을 많이 한 것입니다

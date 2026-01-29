@@ -4,6 +4,7 @@ import AIAgents from "@/components/sections/AIAgents";
 import HowLLMWorks from "@/components/sections/HowLLMWorks";
 import PromptingTechniques from "@/components/sections/PromptingTechniques";
 import ClaudeComparison from "@/components/sections/ClaudeComparison";
+import MITAIToolchain from "@/components/sections/MITAIToolchain";
 import Installation from "@/components/sections/Installation";
 import LiveDemo from "@/components/sections/LiveDemo";
 import FirstProject from "@/components/sections/FirstProject";
@@ -66,10 +67,41 @@ export default function Lecture2() {
         <HowLLMWorks />
         <PromptingTechniques />
         <ClaudeComparison />
+        <MITAIToolchain />
         <Installation />
         <LiveDemo />
         <FirstProject />
         <CourseInfo />
+
+        {/* Next Lecture Teaser */}
+        <section className="py-20 bg-slate-950">
+          <div className="container mx-auto px-4 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <p className="text-gray-500 mb-4">다음 시간에 계속됩니다</p>
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
+                Lecture 3: <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-cyan-400">프롬프트 엔지니어링</span>
+              </h3>
+              <p className="text-gray-400 mb-8 max-w-xl mx-auto">
+                AI에게 공학 문제를 정확히 전달하는 기술을 배우고,
+                열전달 예제로 프롬프트 작성법을 연습합니다.
+              </p>
+              <Link
+                href="/lecture/3"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-violet-600 to-cyan-600 text-white font-semibold text-lg hover:from-violet-500 hover:to-cyan-500 transition-all shadow-lg shadow-violet-500/25 hover:scale-105"
+              >
+                Lecture 3로 이동
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </motion.div>
+          </div>
+        </section>
       </div>
 
       <footer className="py-8 bg-slate-950 border-t border-slate-800">

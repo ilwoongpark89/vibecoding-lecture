@@ -4,6 +4,7 @@ import VisionaryQuotes from "@/components/sections/VisionaryQuotes";
 import TechLeadersOnAI from "@/components/sections/TechLeadersOnAI";
 import ProgrammingEvolution from "@/components/sections/ProgrammingEvolution";
 import WhatIsVibeCoding from "@/components/sections/WhatIsVibeCoding";
+import StanfordAIImpact from "@/components/sections/StanfordAIImpact";
 import ChatWidget from "@/components/ChatWidget";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -61,6 +62,7 @@ export default function Lecture1() {
         <TechLeadersOnAI />
         <ProgrammingEvolution />
         <WhatIsVibeCoding />
+        <StanfordAIImpact />
 
         {/* Next Lecture Teaser */}
         <section className="py-20 bg-slate-950">
