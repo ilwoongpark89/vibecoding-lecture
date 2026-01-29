@@ -1,8 +1,13 @@
 "use client";
 
+import GitGithubIntro from "@/components/sections/GitGithubIntro";
 import WhyGit from "@/components/sections/WhyGit";
 import GitCommands from "@/components/sections/GitCommands";
 import GitWorkflow from "@/components/sections/GitWorkflow";
+import GitLiveDemo from "@/components/sections/GitLiveDemo";
+import GitMistakes from "@/components/sections/GitMistakes";
+import GitHubTour from "@/components/sections/GitHubTour";
+import GitHomework from "@/components/sections/GitHomework";
 import ChatWidget from "@/components/ChatWidget";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -57,9 +62,14 @@ export default function Lecture4() {
           </div>
         </section>
 
+        <GitGithubIntro />
         <WhyGit />
         <GitCommands />
         <GitWorkflow />
+        <GitLiveDemo />
+        <GitMistakes />
+        <GitHubTour />
+        <GitHomework />
 
         {/* Next Lecture Teaser */}
         <section className="py-20 bg-slate-950">
