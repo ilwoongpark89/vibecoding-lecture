@@ -10,7 +10,7 @@ const mistakes = [
       description:
         '열전달 계산기가 잘 동작하는 상태에서 커밋을 안 하고 바로 "차트 추가해줘"라고 요청했다.',
       terminal:
-        '> claude "차트 기능 추가해줘"\n\n✓ Modified calculator.js\n✓ Created chart.js\n\n# 계산이 깨졌다!\n# 그런데 원래 코드가 어디에도 없다...\n# Ctrl+Z도 안 먹힌다... 😱',
+        '> claude "차트 기능 추가해줘"\n\n✓ Modified calculator.js\n✓ Created chart.js\n\n# 계산이 깨졌다!\n# 그런데 원래 코드가 어디에도 없다...\n# Ctrl+Z도 안 먹힌다...',
     },
     solution: {
       description:
@@ -27,7 +27,7 @@ const mistakes = [
       description:
         '커밋을 했는데 메시지에 오타가 있거나 내용이 잘못되었다. "열전닫 계산기" 라고 써버렸다.',
       terminal:
-        'git commit -m "열전닫 계산기 추가"\n\n[main a1b2c3d] 열전닫 계산기 추가\n 3 files changed\n\n# 아... 오타다 😅',
+        'git commit -m "열전닫 계산기 추가"\n\n[main a1b2c3d] 열전닫 계산기 추가\n 3 files changed\n\n# 아... 오타다',
     },
     solution: {
       description:
@@ -44,7 +44,7 @@ const mistakes = [
       description:
         "git add .로 모든 파일을 추가했는데, API 키가 들어있는 .env 파일이나 거대한 node_modules 폴더까지 커밋되어 버렸다.",
       terminal:
-        'git add .\ngit commit -m "프로젝트 완성"\n\n# GitHub에 push 했더니...\n# .env에 있던 API 키가 전 세계에 공개됨 💀\n# node_modules 50,000개 파일이 올라감',
+        'git add .\ngit commit -m "프로젝트 완성"\n\n# GitHub에 push 했더니...\n# .env에 있던 API 키가 전 세계에 공개됨\n# node_modules 50,000개 파일이 올라감',
     },
     solution: {
       description:

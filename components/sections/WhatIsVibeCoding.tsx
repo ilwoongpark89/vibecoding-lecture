@@ -75,9 +75,9 @@ const advantages = [
   },
   {
     emoji: "🚀",
-    title: "10배 빠른 연구",
-    desc: "실험 → 데이터 분석 → 시각화 → 논문의 전 과정을 혼자서 자동화할 수 있다. 개발자를 기다리거나 도구의 한계에 갇히지 않는다.",
-    example: "실험 데이터 100개 → AI에게 분석 스크립트 요청 → 30분 만에 인터랙티브 논문 Figure 완성",
+    title: "연구 속도 향상",
+    desc: "프로토타이핑 및 반복 실험을 단축하여 연구 속도를 향상시킬 수 있다. 개발자를 기다리거나 도구의 한계에 갇히지 않는다.",
+    example: "실험 데이터 100개 → AI에게 분석 스크립트 요청 → 짧은 시간 안에 인터랙티브 논문 Figure 완성",
   },
 ];
 
@@ -266,6 +266,9 @@ export default function WhatIsVibeCoding() {
               </motion.div>
             ))}
           </div>
+          <p className="text-xs text-gray-500 mt-4 text-center">
+            ※ 바이브코딩으로 생성된 코드도 검증, 테스트, 반복 수정이 필요합니다. 위 비교는 초기 프로토타이핑 단계 기준입니다.
+          </p>
         </div>
 
         {/* ═══ Core Thesis: Why ME Students ═══ */}
@@ -426,6 +429,30 @@ export default function WhatIsVibeCoding() {
               ))}
             </div>
           </div>
+
+          {/* Limitations */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mt-16 p-6 rounded-2xl bg-slate-800/50 border border-yellow-500/20"
+          >
+            <h4 className="text-lg font-bold text-yellow-400 mb-4">바이브코딩의 한계</h4>
+            <ul className="space-y-3">
+              {[
+                "AI가 생성한 코드의 물리적 정확성 검증 필요 — 도메인 전문가의 리뷰가 필수입니다.",
+                "복잡한 시스템은 여전히 전통적 접근이 유리 — 대규모 아키텍처 설계에는 한계가 있습니다.",
+                "디버깅 시 코드 이해 능력 필요 — AI가 해결하지 못하는 버그를 직접 분석해야 할 수 있습니다.",
+                "Karpathy 본인도 \"throwaway weekend projects\"에 적합하다고 언급 — 프로덕션 수준의 코드에는 추가 검증이 필요합니다.",
+              ].map((item, i) => (
+                <li key={i} className="flex items-start gap-2 text-sm text-gray-400">
+                  <span className="text-yellow-400 mt-0.5">⚠</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
 
           {/* Final CTA */}
           <motion.div

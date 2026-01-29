@@ -11,7 +11,7 @@ const timeline = [
     icon: "🧱",
   },
   {
-    year: "2015",
+    year: "2019",
     title: "Scratch 3.0",
     desc: "어린이도 프로그래밍 — MIT Media Lab의 비주얼 프로그래밍",
     color: "bg-amber-500",
@@ -41,14 +41,14 @@ const timeline = [
 ];
 
 const calcEvolution = [
-  { era: "과거", tool: "Excel 매크로", desc: "수식 입력, VBA 스크립트", effort: 20 },
-  { era: "과거", tool: "MATLAB 스크립트", desc: "행렬 연산, 플롯 생성", effort: 40 },
-  { era: "과거", tool: "Python 스크립트", desc: "라이브러리 활용, 데이터 분석", effort: 60 },
-  { era: "현재", tool: "AI 바이브코딩", desc: "\"열전달 계산기 만들어줘\" → 웹앱 완성", effort: 95 },
+  { era: "과거", tool: "Excel 매크로", desc: "수식 입력, VBA 스크립트", accessibility: 20 },
+  { era: "과거", tool: "MATLAB 스크립트", desc: "행렬 연산, 플롯 생성", accessibility: 40 },
+  { era: "과거", tool: "Python 스크립트", desc: "라이브러리 활용, 데이터 분석", accessibility: 60 },
+  { era: "현재", tool: "AI 바이브코딩", desc: "\"열전달 계산기 만들어줘\" → 웹앱 완성", accessibility: 95 },
 ];
 
 const mitExamples = [
-  { title: "재료 물성 데이터베이스 앱", desc: "MIT 학생이 App Inventor로 만든 재료별 열전도율, 비열 검색 앱. 현장에서 스마트폰으로 즉시 조회.", icon: "📱" },
+  { title: "재료 물성 데이터베이스 앱", desc: "App Inventor로 만들 수 있는 재료별 열전도율, 비열 검색 앱. 현장에서 스마트폰으로 즉시 조회.", icon: "📱" },
   { title: "실험 데이터 로거", desc: "Arduino 센서 데이터를 블루투스로 받아 실시간 그래프를 그리는 앱. 코딩 없이 블록으로 제작.", icon: "📊" },
   { title: "공학 단위 변환기", desc: "SI/영국 단위 간 변환, 열역학 상수 참조 기능을 갖춘 유틸리티 앱.", icon: "🔧" },
 ];
@@ -129,7 +129,8 @@ export default function MITAppInventor() {
             transition={{ duration: 0.5 }}
             className="rounded-xl bg-slate-800/60 border border-slate-700 p-6"
           >
-            <h3 className="text-sm font-bold text-orange-400 mb-4">공학 계산기의 진화</h3>
+            <h3 className="text-sm font-bold text-orange-400 mb-1">공학 계산기의 진화</h3>
+            <p className="text-[10px] text-gray-500 mb-4">막대 길이 = 사용자 접근성 (비전공자가 해당 도구를 사용할 수 있는 용이성, 높을수록 쉬움)</p>
             <div className="space-y-3">
               {calcEvolution.map((c, i) => (
                 <div key={i} className="flex items-center gap-3">
@@ -141,7 +142,7 @@ export default function MITAppInventor() {
                     <div className="h-5 bg-slate-900 rounded overflow-hidden">
                       <motion.div
                         initial={{ width: 0 }}
-                        whileInView={{ width: `${c.effort}%` }}
+                        whileInView={{ width: `${c.accessibility}%` }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8, delay: i * 0.15 }}
                         className={`h-full rounded ${
@@ -172,7 +173,7 @@ export default function MITAppInventor() {
             className="rounded-xl bg-slate-800/60 border border-slate-700 p-6"
           >
             <h3 className="text-sm font-bold text-orange-400 mb-6 text-center">
-              MIT 학생이 App Inventor로 만든 공학 앱들
+              App Inventor로 만들 수 있는 공학 앱 예시
             </h3>
             <div className="grid md:grid-cols-3 gap-4">
               {mitExamples.map((ex, i) => (

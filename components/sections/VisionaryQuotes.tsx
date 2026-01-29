@@ -222,7 +222,7 @@ export default function VisionaryQuotes() {
               </span>
             </p>
             <p className="text-gray-400 max-w-3xl mx-auto leading-relaxed mb-4">
-              Jobs가 말한 &ldquo;사고력&rdquo;과 Huang이 말한 &ldquo;도메인 전문성&rdquo;은 같은 것을 가리킵니다.
+              Jobs가 말한 &ldquo;사고력&rdquo;과 Huang이 말한 &ldquo;도메인 전문성&rdquo;은 서로 다른 시대의 관점이지만, 하나의 공통점을 시사합니다.
             </p>
             <div className="grid md:grid-cols-2 gap-4 max-w-2xl mx-auto text-left">
               <div className="rounded-xl bg-slate-900/50 border border-slate-700 p-4">

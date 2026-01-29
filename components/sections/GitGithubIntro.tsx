@@ -92,14 +92,14 @@ const sections = [
           },
           {
             emoji: "🎯",
-            text: "MIT, Stanford 등 세계 모든 대학의 CS 수업에서 첫 번째로 가르치는 도구.",
+            text: "MIT, Stanford 등 주요 대학의 CS 수업에서 필수적으로 가르치는 도구.",
             label: "업계 표준",
           },
         ],
       },
     ],
     bottomLine:
-      "Linus Torvalds(리눅스 창시자)가 2005년에 만들었습니다. 전 세계 소프트웨어의 95% 이상이 Git으로 관리됩니다.",
+      "Linus Torvalds(리눅스 창시자)가 2005년에 만들었습니다. 전 세계 소프트웨어의 약 90% 이상(Stack Overflow Developer Survey 기준)이 Git으로 관리됩니다.",
   },
   {
     id: "github",
@@ -322,21 +322,21 @@ export default function GitGithubIntro() {
 
           <div className="mt-6 grid md:grid-cols-3 gap-4 text-center">
             <div className="rounded-xl bg-slate-800/40 border border-slate-700 p-4">
-              <p className="text-3xl font-bold text-emerald-400">95%+</p>
+              <p className="text-3xl font-bold text-emerald-400">~90%+</p>
               <p className="text-sm text-gray-400 mt-1">
-                전 세계 소프트웨어 프로젝트가 Git 사용
+                전 세계 소프트웨어 프로젝트가 Git 사용 (Stack Overflow Developer Survey 기준)
               </p>
             </div>
             <div className="rounded-xl bg-slate-800/40 border border-slate-700 p-4">
               <p className="text-3xl font-bold text-cyan-400">1억+</p>
               <p className="text-sm text-gray-400 mt-1">
-                GitHub 사용자 수
+                GitHub 사용자 수 (2023년 GitHub 공식 발표)
               </p>
             </div>
             <div className="rounded-xl bg-slate-800/40 border border-slate-700 p-4">
               <p className="text-3xl font-bold text-violet-400">3억+</p>
               <p className="text-sm text-gray-400 mt-1">
-                GitHub에 올라온 프로젝트(Repository) 수
+                GitHub에 올라온 프로젝트(Repository) 수 (2024년 기준)
               </p>
             </div>
           </div>

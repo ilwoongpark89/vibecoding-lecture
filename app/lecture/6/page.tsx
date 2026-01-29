@@ -8,6 +8,7 @@ import BuildingEnergyTwin from "@/components/sections/BuildingEnergyTwin";
 import CFDContourViewer from "@/components/sections/CFDContourViewer";
 import SensorMonitoring from "@/components/sections/SensorMonitoring";
 import ClimateDataExplorer from "@/components/sections/ClimateDataExplorer";
+import DataVizHomework from "@/components/sections/DataVizHomework";
 import ChatWidget from "@/components/ChatWidget";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -70,6 +71,7 @@ export default function Lecture6() {
         <CFDContourViewer />
         <SensorMonitoring />
         <ClimateDataExplorer />
+        <DataVizHomework />
 
         {/* Next Lecture Teaser */}
         <section className="py-20 bg-slate-950">

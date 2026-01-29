@@ -66,6 +66,9 @@ export default function ClaudeComparison() {
             <br />
             각각의 장점을 이해하고 상황에 맞게 선택하세요.
           </p>
+          <p className="text-sm text-gray-500 max-w-2xl mx-auto mt-3">
+            이 섹션은 본 강의에서 사용하는 도구(Claude)를 소개합니다. 유사한 기능을 제공하는 도구로 Cursor, GitHub Copilot, Aider 등이 있으며, 핵심 개념은 도구에 관계없이 적용됩니다.
+          </p>
         </motion.div>
 
         {/* Main Comparison */}

@@ -28,7 +28,7 @@ const quotes = [
       "It's like some powerful alien tool has been thrown into the world without an instruction manual. This magnitude 9 career earthquake has already shaken the entire industry.",
     korean:
       "설명서 없이 강력한 외계 도구가 세상에 던져진 것과 같다. 규모 9의 커리어 지진이 이미 산업 전체를 흔들고 있다.",
-    context: "2025년 말 회고",
+    context: "Karpathy가 여러 인터뷰에서 언급한 내용을 종합",
   },
   {
     name: "Jensen Huang",
@@ -37,7 +37,7 @@ const quotes = [
       "AI won't replace humans, but humans with AI will replace humans without AI.",
     korean:
       "AI가 인간을 대체하는 것이 아니라, AI를 사용하는 인간이 AI를 사용하지 않는 인간을 대체할 것이다.",
-    context: "다양한 인터뷰에서 반복",
+    context: "다양한 인터뷰에서 반복 (정확한 출처 미확인, 유사한 발언이 여러 인터뷰에서 반복됨)",
   },
 ];
 
@@ -144,10 +144,10 @@ export default function TechLeadersOnAI() {
         className="max-w-3xl mx-auto text-center"
       >
         <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-          이 수업을 듣는 여러분은 이미 한 발 앞서 있습니다.
+          이러한 변화를 이해하고 활용하는 것이 이 강의의 목표입니다.
           <br />
           <span className="text-white font-semibold">
-            기계공학 도메인 지식 + AI 활용 능력 = 대체 불가능한 엔지니어
+            기계공학 도메인 지식 + AI 활용 능력의 결합을 탐구합니다.
           </span>
         </p>
       </motion.div>

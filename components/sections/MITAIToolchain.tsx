@@ -65,13 +65,13 @@ export default function MITAIToolchain() {
             Week 2 — AI Tools
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            MIT가 제안하는{" "}
+            AI 도구 활용 전략:{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-violet-400">
               AI 도구 활용 전략
             </span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            MIT CSAIL과 MIT Sloan이 제안하는 AI 도구 채택 프레임워크
+            현재 AI 도구 생태계를 기반으로 구성한 강의용 프레임워크
           </p>
         </motion.div>
 
@@ -203,7 +203,7 @@ export default function MITAIToolchain() {
             가장 높은 레벨의 도구를 다룰 수 있으면, 나머지는 자연스럽게 사용할 수 있습니다.
           </p>
           <p className="text-xs text-gray-500">
-            참고: MIT CSAIL · MIT Technology Review · MIT Sloan Management Review
+            이 분류는 현재 AI 도구 생태계를 기반으로 강의용으로 구성한 것입니다.
           </p>
         </motion.div>
       </div>

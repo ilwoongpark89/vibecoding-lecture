@@ -197,9 +197,13 @@ export default function AIAgents() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-center mt-16"
         >
-          <p className="text-gray-400 mb-6">
+          <p className="text-gray-400 mb-4">
             이 중에서 우리는 <span className="text-violet-400 font-semibold">Claude</span>와{" "}
             <span className="text-rose-400 font-semibold">Claude Code</span>를 주로 사용할 예정입니다.
+            이 강의에서 다루는 핵심 개념은 도구에 관계없이 적용됩니다.
+          </p>
+          <p className="text-gray-500 text-sm mb-6">
+            이 외에도 Llama, DeepSeek Coder 등 오픈소스 모델도 빠르게 발전하고 있습니다.
           </p>
           <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-violet-600/20 to-rose-600/20 border border-violet-500/30">
             <span className="w-2 h-2 bg-violet-400 rounded-full animate-pulse" />

@@ -40,8 +40,8 @@ const commands = [
   {
     name: "git checkout",
     desc: "이전 버전으로 이동",
-    detail: "세이브 포인트를 불러옵니다.",
-    example: "git checkout a1b2c3d",
+    detail: "세이브 포인트를 불러옵니다. (참고: Git 2.23+에서는 git switch와 git restore가 checkout의 역할을 분리하여 대체합니다. 브랜치 전환은 git switch, 파일 복구는 git restore를 권장합니다.)",
+    example: "git checkout a1b2c3d\n# 또는 (Git 2.23+)\ngit switch --detach a1b2c3d",
     analogy: "과거를 구경만 하는 것. 수정하려면 branch를 만들어야 함",
     color: "from-rose-500 to-pink-500",
   },

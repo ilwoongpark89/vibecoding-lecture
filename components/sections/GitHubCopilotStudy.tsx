@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const productivityStats = [
   { label: "개발 속도", before: "기준", after: "55% 향상", icon: "⚡" },
   { label: "코드 품질", before: "기준", after: "동일 유지", icon: "✅" },
-  { label: "일일 커밋 수", before: "3회", after: "8회", icon: "📸" },
+  { label: "일일 커밋 수", before: "3회", after: "8회 (강의용 예시, 실제 데이터 아님)", icon: "📸" },
   { label: "작업 만족도", before: "기준", after: "75% 향상", icon: "😊" },
 ];
 
@@ -152,6 +152,9 @@ export default function GitHubCopilotStudy() {
               </div>
             </div>
             <p className="text-center text-sm text-emerald-400 font-bold mt-3">55% 더 빠르게 완료</p>
+            <p className="text-center text-[11px] text-gray-500 mt-2 leading-relaxed">
+              ※ 이 연구는 GitHub(Microsoft)이 자사 제품에 대해 수행한 것으로, 특정 코딩 과제(HTTP 서버 구현) 기준입니다. 일반적인 개발 생산성과 다를 수 있습니다.
+            </p>
           </motion.div>
 
           {/* AI + Git synergy */}
@@ -223,6 +226,25 @@ export default function GitHubCopilotStudy() {
           </motion.div>
         </div>
 
+        {/* 한계점 */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="max-w-5xl mx-auto mt-8"
+        >
+          <div className="rounded-xl bg-amber-500/5 border border-amber-500/20 p-6">
+            <h3 className="text-sm font-bold text-amber-400 mb-3">연구 한계점</h3>
+            <ol className="space-y-2 text-sm text-gray-400 list-decimal list-inside">
+              <li>GitHub 자체 연구로 독립성 부족</li>
+              <li>특정 과제(HTTP 서버 구현) 기준으로 일반화 어려움</li>
+              <li>장기적 코드 유지보수 효과 미검증</li>
+              <li>독립 재현 연구에서는 더 낮은 향상률 보고</li>
+            </ol>
+          </div>
+        </motion.div>
+
         {/* Bottom */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -237,7 +259,7 @@ export default function GitHubCopilotStudy() {
             </span>
           </p>
           <p className="text-xs text-gray-500">
-            참고: GitHub Copilot Research Blog · Ziegler et al. 2024 · GitHub Universe 2024
+            Peng, S., Kalliamvakou, E., Cihon, P., &amp; Demirer, M. (2023). The Impact of AI on Developer Productivity: Evidence from GitHub Copilot. arXiv:2302.06590
           </p>
         </motion.div>
       </div>

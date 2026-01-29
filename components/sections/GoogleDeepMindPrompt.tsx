@@ -6,7 +6,7 @@ const findings = [
   {
     title: "\"Let's think step by step\"",
     source: "Kojima et al., 2022 (Google Brain)",
-    before: 17.9,
+    before: 17.7,
     after: 78.7,
     desc: "이 한 문장을 추가하면 수학 문제 정답률이 급상승. Zero-shot Chain-of-Thought의 시작.",
   },
@@ -19,10 +19,10 @@ const findings = [
   },
   {
     title: "\"You are an expert in [field]\"",
-    source: "Role Prompting Research, 2023",
+    source: "다수의 연구에서 보고 (정확한 수치는 모델과 태스크에 따라 다름)",
     before: 55,
     after: 78,
-    desc: "역할을 부여하면 전문 분야 정확도가 15-30% 향상. 도메인 전문성 활성화.",
+    desc: "역할을 부여하면 전문 분야 정확도가 향상되는 경향. 도메인 전문성 활성화.",
   },
 ];
 

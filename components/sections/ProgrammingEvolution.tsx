@@ -523,6 +523,7 @@ export default function ProgrammingEvolution() {
           <p className="text-gray-500 mt-6 text-sm">
             프로그래밍은 항상 더 <span className="text-violet-400">인간에게 가까운 방향</span>으로 진화해왔습니다.
             <br />바이브코딩은 그 흐름의 자연스러운 다음 단계입니다.
+            <br /><span className="text-gray-600 text-xs">다만 추상화 수준이 높아질수록 세밀한 제어, 디버깅, 보안 측면에서 새로운 과제가 생깁니다.</span>
           </p>
         </motion.div>
       </div>

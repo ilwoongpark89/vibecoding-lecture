@@ -20,7 +20,7 @@ const aiMilestones = [
   { year: "2015", event: "이미지 인식", desc: "AI가 인간 수준의 이미지 분류 달성 (ImageNet)", color: "bg-blue-500" },
   { year: "2019", event: "자연어 이해", desc: "GPT-2 등장, AI가 인간 수준의 글쓰기 가능", color: "bg-violet-500" },
   { year: "2023", event: "코드 생성", desc: "GPT-4, Claude가 프로그래머 수준의 코드 작성", color: "bg-cyan-500" },
-  { year: "2024", event: "수학 올림피아드", desc: "AI가 국제수학올림피아드 금메달 수준 달성", color: "bg-amber-500" },
+  { year: "2024", event: "수학 올림피아드", desc: "AI가 국제수학올림피아드 은메달 수준 달성 (28/42점)", color: "bg-amber-500" },
 ];
 
 const investmentBars = [
@@ -46,7 +46,7 @@ export default function StanfordAIImpact() {
             Week 1 — AI Landscape
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Stanford HAI AI Index 2025로 보는{" "}
+            AI의 현재를 숫자로 보다:{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-violet-400">
               AI의 현재
             </span>
@@ -192,7 +192,7 @@ export default function StanfordAIImpact() {
             </span>
           </p>
           <p className="text-xs text-gray-500">
-            참고: Stanford HAI AI Index Report 2025 (aiindex.stanford.edu)
+            데이터 출처: Stanford HAI AI Index Report, GitHub Octoverse, Statista 등 공개 자료를 종합 정리. 정확한 수치는 원문 참조.
           </p>
         </motion.div>
       </div>

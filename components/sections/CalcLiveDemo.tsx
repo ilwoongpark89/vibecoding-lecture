@@ -263,8 +263,7 @@ export default function CalcLiveDemo() {
               10단계 만에 공학 계산기가 완성되었습니다.
             </p>
             <p className="text-sm text-gray-400">
-              코드를 한 줄도 직접 쓰지 않았습니다. AI에게 &quot;무엇을&quot; 원하는지만
-              정확히 설명했습니다.
+              코드를 직접 타이핑하지 않았지만, 정확한 프롬프트를 작성하려면 프레임워크와 공학 지식이 필요합니다.
             </p>
           </div>
         </motion.div>

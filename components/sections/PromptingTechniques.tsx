@@ -45,16 +45,16 @@ const techniques = [
       promptAfter: `With CoT:\n"복합벽의 열저항을 구해줘. 단계별로 생각해봐:\n1) 각 층의 전도 열저항\n2) 양쪽 대류 열저항\n3) 총 열저항\n4) 열유속 순서로."\n→ 정확한 단계별 풀이`,
     },
     keyPoint:
-      '"Let\'s think step by step" 한 문장이 수학 문제 정확도를 40% 이상 향상시킴',
+      '"Let\'s think step by step" 한 문장이 GSM8K 수학 벤치마크에서 40% 이상 향상시킴',
     paper:
       'Wei et al., "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models", 2022',
   },
   {
     id: 3,
     name: "Role Prompting",
-    badge: "MIT Sloan",
+    badge: "역할 부여",
     description:
-      "AI에게 특정 역할/전문가 페르소나를 부여하는 기법. MIT Sloan EdTech에서 권장하는 핵심 전략",
+      "AI에게 특정 역할/전문가 페르소나를 부여하는 기법. 프롬프트 엔지니어링에서 널리 권장되는 핵심 전략",
     example: {
       label: "열전달 예시",
       promptBefore: `Without Role:\n"핀 효율을 구해줘"`,
@@ -62,7 +62,7 @@ const techniques = [
     },
     quote:
       '"Providing a persona or voice to the AI significantly improves output quality"',
-    quoteSource: "— MIT Sloan EdTech",
+    quoteSource: "— 프롬프트 엔지니어링 분야에서 자주 언급되는 관점",
   },
 ];
 
@@ -237,17 +237,17 @@ export default function PromptingTechniques() {
           className="mt-12 bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 border border-emerald-500/20 rounded-2xl p-8"
         >
           <h3 className="text-emerald-400 font-semibold text-sm uppercase tracking-wider mb-4">
-            MIT Sloan의 핵심 조언
+            프롬프트 엔지니어링의 핵심 조언
           </h3>
-          <blockquote className="text-xl md:text-2xl text-gray-200 leading-relaxed font-light">
-            &ldquo;프롬프트 엔지니어링의 현재 최선책은{" "}
+          <p className="text-xl md:text-2xl text-gray-200 leading-relaxed font-light">
+            프롬프트 엔지니어링의 현재 최선책은{" "}
             <span className="text-emerald-400 font-medium">
-              &lsquo;프롬프트 엔지니어링을 하지 않는 것&rsquo;
+              프롬프트 엔지니어링을 하지 않는 것
             </span>
             이다. 대신 검증된 프롬프트 템플릿을 사용하라. 매번 새로 만들지
-            말고, 잘 작동하는 패턴을 재사용하라.&rdquo;
-          </blockquote>
-          <p className="text-gray-500 mt-4 text-sm">— MIT Sloan, 2025</p>
+            말고, 잘 작동하는 패턴을 재사용하라.
+          </p>
+          <p className="text-gray-500 mt-4 text-sm">— 프롬프트 엔지니어링 분야에서 자주 언급되는 관점</p>
         </motion.div>
       </div>
     </section>

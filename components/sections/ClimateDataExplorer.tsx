@@ -77,6 +77,12 @@ export default function ClimateDataExplorer() {
           </div>
 
           <div className="p-6 space-y-6">
+            {/* Data disclaimer */}
+            <div className="rounded-lg bg-amber-500/10 border border-amber-500/30 p-3 text-center">
+              <p className="text-xs text-amber-300">
+                ※ 이 데이터는 강의용 시뮬레이션 데이터입니다. 실제 데이터는 기상청(KMA) 또는 NASA GISS에서 확인하세요.
+              </p>
+            </div>
             {/* Main: Climate spiral + side stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {/* Climate spiral mockup */}

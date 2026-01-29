@@ -124,7 +124,8 @@ export default function CFDContourViewer() {
               <div className="space-y-4">
                 {/* Variable selector */}
                 <div className="rounded-lg bg-slate-900/80 border border-slate-700 p-4">
-                  <p className="text-xs text-gray-500 mb-2">변수 선택</p>
+                  <p className="text-xs text-gray-500 mb-1">변수 선택</p>
+                  <p className="text-[9px] text-amber-400/70 mb-2">(데모용 목업 — 실제 구현 시 선택에 따라 시각화가 변경됩니다)</p>
                   <div className="space-y-1">
                     {variables.map((v, i) => (
                       <button
@@ -144,7 +145,8 @@ export default function CFDContourViewer() {
 
                 {/* Colormap selector */}
                 <div className="rounded-lg bg-slate-900/80 border border-slate-700 p-4">
-                  <p className="text-xs text-gray-500 mb-2">컬러맵</p>
+                  <p className="text-xs text-gray-500 mb-1">컬러맵</p>
+                  <p className="text-[9px] text-amber-400/70 mb-2">(데모용 목업)</p>
                   <div className="space-y-1">
                     {colormaps.map((c, i) => (
                       <button
