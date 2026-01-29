@@ -251,54 +251,6 @@ export default function CalcLiveDemo() {
           </button>
         </div>
 
-        {/* Timeline summary */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mt-16"
-        >
-          <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-slate-700" />
-
-            <div className="space-y-4">
-              {steps.map((step, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, x: -10 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.05 }}
-                  className="flex items-center gap-4 cursor-pointer group"
-                  onClick={() => setActiveStep(i)}
-                >
-                  <div
-                    className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold z-10 transition-all ${
-                      i === activeStep
-                        ? "bg-orange-500 text-white ring-2 ring-orange-500/30"
-                        : i < activeStep
-                        ? "bg-orange-500/30 text-orange-300"
-                        : "bg-slate-700 text-gray-500"
-                    }`}
-                  >
-                    {step.num}
-                  </div>
-                  <div
-                    className={`text-sm transition-all ${
-                      i === activeStep
-                        ? "text-orange-300 font-medium"
-                        : "text-gray-500 group-hover:text-gray-300"
-                    }`}
-                  >
-                    {step.title}
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </motion.div>
-
         {/* Bottom message */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
