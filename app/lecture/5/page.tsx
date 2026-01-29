@@ -1,9 +1,14 @@
 "use client";
 
 import CalcShowcase from "@/components/sections/CalcShowcase";
+import CalcInteractiveDemo from "@/components/sections/CalcInteractiveDemo";
 import CalcBuildSteps from "@/components/sections/CalcBuildSteps";
+import CalcLiveDemo from "@/components/sections/CalcLiveDemo";
+import CalcUXPrinciples from "@/components/sections/CalcUXPrinciples";
+import CalcDebugCases from "@/components/sections/CalcDebugCases";
 import CalcChallenges from "@/components/sections/CalcChallenges";
 import MITAppInventor from "@/components/sections/MITAppInventor";
+import CalcHomework from "@/components/sections/CalcHomework";
 import ChatWidget from "@/components/ChatWidget";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -59,9 +64,14 @@ export default function Lecture5() {
         </section>
 
         <CalcShowcase />
+        <CalcInteractiveDemo />
         <CalcBuildSteps />
+        <CalcLiveDemo />
+        <CalcUXPrinciples />
+        <CalcDebugCases />
         <CalcChallenges />
         <MITAppInventor />
+        <CalcHomework />
 
         {/* Next Lecture Teaser */}
         <section className="py-20 bg-slate-950">
