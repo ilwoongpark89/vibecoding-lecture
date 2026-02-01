@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import LectureGuard from "@/components/LectureGuard";
 
 interface Question {
   id: number;
@@ -196,6 +197,7 @@ export default function ExamPage() {
   const gradeInfo = getGrade(score, questions.length);
 
   return (
+    <LectureGuard>
     <main className="min-h-screen bg-slate-950 text-white">
       {/* Nav */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
@@ -473,5 +475,6 @@ export default function ExamPage() {
         )}
       </div>
     </main>
+    </LectureGuard>
   );
 }

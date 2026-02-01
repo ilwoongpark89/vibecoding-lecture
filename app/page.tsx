@@ -53,11 +53,31 @@ const career = [
 
 export default function Home() {
   const [showContent, setShowContent] = useState(false);
+  const [password, setPassword] = useState("");
+  const [unlocked, setUnlocked] = useState(false);
+  const [shake, setShake] = useState(false);
 
   useEffect(() => {
     const t = setTimeout(() => setShowContent(true), 600);
     return () => clearTimeout(t);
   }, []);
+
+  useEffect(() => {
+    if (typeof window !== "undefined" && sessionStorage.getItem("mftel-unlocked") === "true") {
+      setUnlocked(true);
+    }
+  }, []);
+
+  const handlePasswordSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (password.toUpperCase() === "MFTEL") {
+      setUnlocked(true);
+      sessionStorage.setItem("mftel-unlocked", "true");
+    } else {
+      setShake(true);
+      setTimeout(() => setShake(false), 500);
+    }
+  };
 
   return (
     <main className="min-h-screen bg-slate-950 text-white">
@@ -238,6 +258,38 @@ export default function Home() {
             </p>
           </motion.div>
 
+          {!unlocked && (
+            <motion.div
+              className="max-w-md mx-auto text-center mb-10"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <div className="p-6 rounded-2xl bg-slate-800/50 border border-slate-700/50 backdrop-blur-sm">
+                <div className="flex items-center justify-center gap-3 mb-4">
+                  <svg className="w-5 h-5 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
+                  <p className="text-gray-400 text-sm">2주차부터 접근하려면 패스워드를 입력하세요.</p>
+                </div>
+                <form onSubmit={handlePasswordSubmit} className="flex gap-2">
+                  <input
+                    type="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    placeholder="Password"
+                    className={`flex-1 px-4 py-3 rounded-xl bg-slate-900 border border-slate-600 text-white placeholder-gray-500 focus:outline-none focus:border-violet-500 transition-colors text-center tracking-widest`}
+                    style={shake ? { animation: "shake 0.5s ease-in-out" } : {}}
+                  />
+                  <button
+                    type="submit"
+                    className="px-5 py-3 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-semibold transition-colors"
+                  >
+                    Enter
+                  </button>
+                </form>
+              </div>
+            </motion.div>
+          )}
+
           <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {lectures.map((lec, i) => (
               <motion.div
@@ -264,7 +316,7 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                ) : lec.ready ? (
+                ) : lec.ready && (lec.id === 1 || unlocked) ? (
                   <Link
                     href={`/lecture/${lec.id}`}
                     className="group block p-5 rounded-2xl bg-gradient-to-br from-violet-500/10 to-fuchsia-500/5 border border-violet-500/30 hover:border-violet-400/50 hover:shadow-lg hover:shadow-violet-500/10 transition-all duration-300 hover:-translate-y-1"
@@ -284,6 +336,18 @@ export default function Home() {
                       </svg>
                     </div>
                   </Link>
+                ) : lec.ready && !unlocked ? (
+                  <div className="p-5 rounded-2xl bg-gradient-to-br from-violet-500/5 to-fuchsia-500/5 border border-slate-700/50 opacity-50 cursor-not-allowed">
+                    <div className="flex items-start gap-4">
+                      <span className="flex-shrink-0 w-10 h-10 rounded-xl bg-slate-700 flex items-center justify-center text-gray-400 font-bold text-sm">
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
+                      </span>
+                      <div className="flex-1 min-w-0">
+                        <h3 className="font-semibold text-gray-400 truncate">{lec.title}</h3>
+                        <p className="text-sm text-gray-500 mt-0.5 truncate">{lec.subtitle}</p>
+                      </div>
+                    </div>
+                  </div>
                 ) : (
                   <div className="p-5 rounded-2xl bg-slate-800/30 border border-slate-700/50 opacity-60">
                     <div className="flex items-start gap-4">

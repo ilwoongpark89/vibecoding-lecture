@@ -12,9 +12,11 @@ import CourseInfo from "@/components/sections/CourseInfo";
 import ChatWidget from "@/components/ChatWidget";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import LectureGuard from "@/components/LectureGuard";
 
 export default function Lecture2() {
   return (
+    <LectureGuard>
     <main className="min-h-screen bg-slate-950">
       {/* Top Nav */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
@@ -112,5 +114,6 @@ export default function Lecture2() {
 
       <ChatWidget />
     </main>
+    </LectureGuard>
   );
 }

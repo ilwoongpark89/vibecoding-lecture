@@ -42,6 +42,15 @@ html {
   background: #64748b;
 }
 
+/* Shake animation */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-8px); }
+  40% { transform: translateX(8px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+}
+
 /* Selection */
 ::selection {
   background: rgba(139, 92, 246, 0.3);
